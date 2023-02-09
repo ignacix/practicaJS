@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Calculadora de edad</h1>
+    <input id="entrada" type="text">
+    <button onclick="calcularAñoActual()"> calcular Edad</button>
+    <p id="parrafo">Tu edad es:</p>
+    <script>
+
+        function calcularAñoActual(){
+            
+            let objFecha = new Date();
+            
+            añoActual = parseInt(objFecha.getFullYear());
+            
+            //return añoActual;
+            alert(añoActual);
+
+            let añoNacimiento = typeof(document.getElementById("entrada"));
+            alert(añoNacimiento);
+        }
+        
+        function calcularEdad(){
+        
+            let añoNacimiento = parseInt(document.getElementById("entrada"));
+
+            //alert(añoNacimiento);
+
+            //if(añoNacimiento == "" || typeof(añoNacimiento) != "number"){
+
+              //  let añoNacimiento = parseInt(prompt("Ingrese su edad:",""));
+            //};
+        
+            let edad;
+
+            //alert(typeof(parseInt(añoActual)));
+
+            
+            edad = calcularAñoActual() - añoNacimiento;
+
+            document.getElementById("parrafo").innerHTML =  edad;
+
+
+        }
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
