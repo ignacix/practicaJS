@@ -5,57 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div>
+        <h1>Calculadora de edad</h1>
+        <p>Ingrese su <strong>Año de nacimiento</strong> </p>
+        <label for=""><input id="entrada" type="text"></label>
+        <button onclick="calcularEdad()"> Calcular Edad</button>
+        <p id="parrafo">Tu edad es:</p>
+    </div>
+    
+</body>
 
-    <h1>Calculadora de edad</h1>
-    <input id="entrada" type="text">
-    <button onclick="calcularAñoActual()"> calcular Edad</button>
-    <p id="parrafo">Tu edad es:</p>
-    <script>
+<script>
 
-        function calcularAñoActual(){
-            
-            let objFecha = new Date();
-            
-            añoActual = parseInt(objFecha.getFullYear());
-            
-            //return añoActual;
-            alert(añoActual);
-
-            let añoNacimiento = typeof(document.getElementById("entrada"));
-            alert(añoNacimiento);
-        }
+    function calcularAñoActual(){
         
-        function calcularEdad(){
+        let objFecha = new Date();
         
-            let añoNacimiento = parseInt(document.getElementById("entrada"));
+        añoActual = parseInt(objFecha.getFullYear());
+        
+        return añoActual;
+  
+    }
+    
+    function calcularEdad(){
+    
+        let añoNacimiento = parseInt(document.getElementById("entrada").value);
 
-            //alert(añoNacimiento);
+        if((añoNacimiento == "") || isNaN(añoNacimiento)){
 
-            //if(añoNacimiento == "" || typeof(añoNacimiento) != "number"){
-
-              //  let añoNacimiento = parseInt(prompt("Ingrese su edad:",""));
-            //};
+            alert("Por favor ingrese su año de nacimiento");
+            document.getElementById("entrada").value = "";
+        }else{
         
             let edad;
 
-            //alert(typeof(parseInt(añoActual)));
-
-            
             edad = calcularAñoActual() - añoNacimiento;
 
-            document.getElementById("parrafo").innerHTML =  edad;
+            document.getElementById("parrafo").innerHTML = "Tu edad es: " + edad;
 
 
         }
-
+    
         
+    }
+</script>
 
-
-
-
-
-    </script>
-</body>
 </html>

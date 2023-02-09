@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    justify-content: center;
+
+}
+
+h1{
+    color: white;
+    -webkit-text-stroke:0.5px black;
+}
+div{
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 50px;
+    border: 1px solid lightblue;
+}
+
+input{
+    border-radius: 50px;
+    border-color: transparent;
+    padding: 3px 5px;
+    
+}
+
+button{
+    border-radius: 50px;
+    padding: 4px;
+    border: 1px solid gray;
+}
+
+#parrafo{
+    font-size: 20px;
+}
