@@ -13,6 +13,9 @@ div{
     padding: 20px;
     border-radius: 50px;
     border: 1px solid lightblue;
+    display:flex;
+    flex-direction: column ;
+    align-items: center;
 }
 
 input{
@@ -26,6 +29,8 @@ button{
     border-radius: 50px;
     padding: 4px;
     border: 1px solid gray;
+    display: flex;
+    margin-top: 10px;
 }
 
 #parrafo{
